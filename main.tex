@@ -1,6 +1,6 @@
 \documentclass[11pt,letterpaper]{article}
 
-\usepackage[margin=0.8in]{geometry}
+\usepackage[margin=0.6in]{geometry}
 \usepackage[T1]{fontenc}
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}
@@ -12,7 +12,7 @@
 
 \pagestyle{empty}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.2em}
+\setlength{\parskip}{0.05em}
 \setlist[itemize]{leftmargin=1.2em, itemsep=0.1em, topsep=0.0em, parsep=0pt, partopsep=0pt}
 
 \definecolor{heading}{HTML}{1F3A5F}
@@ -38,23 +38,23 @@
 		{, #3\textup{#1}#4-#5\textup{#2}#6\textup{]}}
 
 \newenvironment{publist}[1][]{
-	\par\begingroup\begin{enumerate}[topsep=0.1\baselineskip, partopsep=0pt, itemsep=0.1\baselineskip, parsep=0.1\baselineskip, leftmargin=2em, rightmargin=0.5em, label={[}\arabic*{]}, ref=\arabic*,#1]
+	\par\begingroup\begin{enumerate}[topsep=0em, partopsep=0pt, itemsep=0em, parsep=0em, leftmargin=2em, rightmargin=0.5em, label={[}\arabic*{]}, ref=\arabic*,#1]
 }{\end{enumerate}\par\endgroup\par}
 
 \titleformat{\section}
   {\large\bfseries\color{heading}}
   {}
   {0pt}
-  {}
-  [\titlerule]
+  {\vspace{-0.5em}}
+  [\titlerule\vspace{-0.1em}]
 
 \newcommand{\cvname}[1]{\begin{center}{\LARGE\bfseries #1}\end{center}}
 \newcommand{\contactline}[1]{\begin{center}#1\end{center}}
 \newcommand{\placeholder}[1]{\textcolor{placeholderred}{#1}}
-\newcommand{\iconlink}[3]{\href{#1}{\raisebox{0.15ex}{\scriptsize#2}\,#3}}
-\newcommand{\medialink}[2]{\href{#1}{\textit{#2}\,\raisebox{0.15ex}{\scriptsize\faLink}}}
-\newcommand{\gap}{\par\addvspace{0.35em}}
-\newcommand{\Gap}{\par\addvspace{0.8em}}
+\newcommand{\iconlink}[3]{\href{#1}{#3}}
+\newcommand{\medialink}[2]{\href{#1}{\textit{#2}}}
+\newcommand{\gap}{\par\addvspace{0.25em}}
+\newcommand{\Gap}{\par\addvspace{0.5em}}
 \newcommand{\cventrytwoline}[4]{
   \textbf{#1} \hfill #2 \\
   \textit{#3} \hfill \textit{#4}\par
@@ -76,26 +76,37 @@
 \cvname{Chuanjin Su}
 \contactline{
   Ph.D. Candidate, Mechanical and Aerospace Engineering Department, UCLA \\
-  43-133 Eng. IV, 420 Westwood Plaza, Los Angeles, CA 90095 \\
   \iconlink{mailto:chuanjin@g.ucla.edu}{\faEnvelope}{chuanjin@g.ucla.edu}
   \textbar\ 
-  % \href{https://yourwebsite.example}{\placeholder{yourwebsite.example}}
-  % \textbar\ 
   \iconlink{https://scholar.google.com/citations?user=YqF4gakAAAAJ&hl=en}{\faGraduationCap}{Google Scholar}
   \textbar\ 
   \iconlink{https://orcid.org/0000-0002-0301-8068}{\faOrcid}{ORCID}
-  \textbar\ 
-  \iconlink{https://www.linkedin.com/in/scj16}{\faLinkedin}{LinkedIn}
 }
 \Gap
 
-\section*{Research Metrics}
+\section*{Reviewer Profile}
+
+Ph.D. candidate in Heat and Mass Transfer at UCLA working on nanoscale heat transfer, thermal transport in materials, and first-principles modeling, with applications in electronics thermal management.
+\gap
+
+\textbf{Available to review}:
+
 \begin{itemize}
-  \item Google Scholar citations: 90 (April 2026)
-  \item 7 peer-reviewed publications, including 5 first-author papers
-  \item Co-first-author \textit{Science} paper establishing new historical record for heat conduction in metals
-  \item Research featured by 10+ news outlets including \textit{Scientific American}, \textit{Physics World}, \textit{Interesting Engineering}, \textit{New Atlas}
-  \item Research focus: thermal management for advanced electronics, heat transfer in nanostructures, emerging materials for energy transport and conversion
+  \item Thermal transport in solids, interfaces, and nanostructures
+  \item Phonon, electron, and coupled transport in materials
+  \item First-principles and atomistic modeling of thermal transport
+  \item Boltzmann transport equation (BTE), Monte Carlo (MC) simulations, molecular dynamics (MD) simulations, and related theoretical methods
+  \item Thermal management for electronics and power devices
+\end{itemize}
+\Gap
+
+\section*{Research Summary}
+
+\begin{itemize}
+  \item 7 peer-reviewed publications, including 5 first-author and co-first-author papers
+  \item Publications in \textit{Science}, \textit{Int. J. Heat Mass Transfer}, \textit{J. Heat Transfer}, \textit{J. Appl. Phys.}, \textit{Accounts of Materials Research}
+  \item Co-first-author of a \textit{Science} paper on ultrahigh thermal conductivity in metallic $\theta$-TaN~\cref{pub:science2026}
+  \item Research contributions span nanoscale heat transfer, first-principles modeling, thermal management and optimization
 \end{itemize}
 \Gap
 
@@ -126,69 +137,50 @@
 \researchentry{Graduate Student Researcher}{2023 -- Present}{Department of Mechanical and Aerospace Engineering, UCLA}{Advisor: Prof. Yongjie Hu}
 \begin{itemize}
   \item Develop first-principles methods to understand energy transport in materials and nanostructures, relevant to semiconductors, power electronics, and next-generation thermal management technologies.
-  \item Lead the theoretical modeling for a co-first-author \textit{Science} paper~\cref{pub:science2026} demonstrating a new historical record for heat conduction in metals (3x that of copper).
-  \item Support collaborative projects by integrating theoretical analysis with experimental measurements to advance thermal management strategies for electronics and power systems.
+  \item Lead the first-principles modeling for a co-first-author \textit{Science} paper~\cref{pub:science2026} demonstrating record-high thermal conductivity in metallic materials (three times that of copper) due to anomalously weak phonon-phonon and electron-phonon interactions in $\theta$-TaN.
 \end{itemize}
 \gap
 
 \researchentry{Research Assistant}{2020 -- 2023}{Department of Engineering Mechanics, Tsinghua University}{Advisor: Prof. Zeng-Yuan Guo}
 \begin{itemize}
-  \item Conducted theoretical and computational research in non-equilibrium thermal transport theory, heat conduction optimization.
-  \item Published a series studies on heat conduction optimization~\cref{pub:hmt2024,pub:hmt2023} that provided both theoretical insights and practical strategies for enhancing thermal management solutions.
+  \item Conducted theoretical and computational research in non-equilibrium thermal transport theory~\cref{pub:relativistic2022,pub:verification2022}, heat conduction optimization theory and topology optimization~\cref{pub:hmt2023,pub:hmt2024}.
 \end{itemize}
 \Gap
 
 \section*{Publications}
-  \nobibliography{ref}
-	\bibliographystyle{plainurl}
+
+\nobibliography{ref}
+\bibliographystyle{plainurl}
 
 $\dagger$ = co-first author
 
 \begin{publist}[series=Pub, itemsep=0.5em, topsep=0.5em]
   \item \bibentry{li_metallic_2026}\label{pub:science2026}
-  \item \bibentry{li_advancing_2025}
-  \item \bibentry{su_nonclassical_2025}
+  \item \bibentry{li_advancing_2025}\label{pub:advancing2025}
+  \item \bibentry{su_nonclassical_2025}\label{pub:nonclassical2025}
   \item \bibentry{su_collaborative_2024}\label{pub:hmt2024}
   \item \bibentry{su_generalized_2023}\label{pub:hmt2023}
-  \item \bibentry{su_relativistic_2022}
-  \item \bibentry{li_verification_2022}
+  \item \bibentry{su_relativistic_2022}\label{pub:relativistic2022}
+  \item \bibentry{li_verification_2022}\label{pub:verification2022}
 \end{publist}
 \Gap
 
-\section*{Honors, Fellowships, and Awards}
+\section*{Honors and Fellowships}
 
-\cventry{Division of Graduate Education Fellowship}{Summer 2025}{University of California, Los Angeles}{}
+\cventryoneline{Division of Graduate Education Fellowship, {\mdseries \it UCLA}}{Summer 2025}
 \gap
 
-\cventry{Mechanical and Aerospace Engineering Department Fellowship}{2023 -- 2024}{University of California, Los Angeles}{}
+\cventryoneline{Mechanical and Aerospace Engineering Department Fellowship, {\mdseries \it UCLA}}{2023 -- 2024}
 \gap
 
-\cventry{Sino-French ``4+4" Double Degree Program Fellowship}{2018 -- 2020}{China Scholarship Council}{}
+\cventryoneline{Sino-French ``4+4" Double Degree Program Fellowship, {\mdseries \it China Scholarship Council}}{2018 -- 2020}
 \gap
 
-\cventry{Tsinghua Academic Excellence Scholarship}{Sep 2018}{Tsinghua University}{}
+\cventryoneline{Tsinghua Academic Excellence Scholarship, {\mdseries \it Tsinghua University}}{Sep 2018}
 \gap
 
-\cventry{Tsinghua's Friend -- Zheng Geru Scholarship}{Sep 2017}{Tsinghua University}{}
+\cventryoneline{Tsinghua's Friend -- Zheng Geru Scholarship, {\mdseries \it Tsinghua University}}{Sep 2017}
 \Gap
-
-\section*{Media Coverage}
-
-\begin{itemize}[itemsep=0.2em]
-  \item \medialink{https://www.scientificamerican.com/article/new-metal-with-triple-coppers-heat-conduction-challenges-fundamental-physics/}{Scientific American}, ``Super heat conductor challenges fundamental physics'' (April 2026)
-  \item \medialink{https://interestingengineering.com/science/metallic-material-highest-thermal-conductivity-identified}{Interesting Engineering}, ``3x more efficient: Metallic material with highest thermal conductivity identified'' (Jan 2026)
-  \item \medialink{https://newatlas.com/materials/metallic-material-conducts-heat-3x-tantalum-nitride}{New Atlas}, ``Newly discovered material conducts heat nearly 3x faster than any metal'' (Jan 2026)
-  \item \medialink{https://physicsworld.com/a/metallic-material-breaks-100-year-thermal-conductivity-record}{Physics World}, ``Metallic material breaks 100-year thermal conductivity record'' (Feb 2026)
-  \item \medialink{https://hothardware.com/news/breakthrough-metal-could-revolutionize-chip-cooling-and-thermal-management}{HotHardware}, ``Breakthrough Metal Could Revolutionize Chip Cooling And Thermal Management'' (Jan 2026)
-  \item \medialink{https://techxplore.com/news/2026-01-newly-metallic-material-thermal-upends.html}{Tech Xplore}, ``Newly discovered metallic material with record thermal conductivity upends assumptions about heat transport limits'' (Jan 2026)
-\end{itemize}
-
-My research has also been featured in \medialink{https://static.asminternational.org/amp/202603/}{AMP Magazine (ASM International)},
-\medialink{https://www.nanowerk.com/nanotechnology-news3/newsid\%3D68531.php}{Nanowerk},
-\medialink{https://newsroom.ucla.edu/dept/faculty/tantalum-nitride-record-thermal-conductivity-ucla-research}{UCLA Newsroom},
-\medialink{https://samueli.ucla.edu/ucla-led-team-discovers-metallic-material-with-record-thermal-conductivity/}{UCLA Samueli News},
-\medialink{https://dailybruin.com/2026/02/20/ucla-engineers-discover-metal-with-potential-to-enhance-ai-chip-performance}{Daily Bruin},
-\medialink{https://cnsi.ucla.edu/january-16-2026-ucla-led-team-discovers-metallic-material-with-record-thermal-conductivity}{UCLA CNSI News}.
 
 \section*{Teaching Experience}
 
@@ -203,18 +195,11 @@ MAE 157W Basic Mechanical and Aerospace Engineering Laboratory\hfill 2025 Winter
 MAE 105D Transport Phenomena\hfill 2026 Winter, 2026 Spring
 }
 
-\begin{itemize}
-  \item Supported approximately \textbf{366 students} across 3 courses at UCLA.
-  \item Led discussion sections, held regular office hours, and provided laboratory instruction for upper-division MAE courses.
-  \item Delivered occasional lectures and provided classroom instruction.
-\end{itemize}
+Led discussion sections, office hours, grading, and occasional lectures for upper-division MAE courses. Supported 300+ students in understanding heat transfer courses over multiple quarters.
 \Gap
 
-\section*{Research and Technical Expertise}
-\begin{itemize}
-  \item \textbf{Research Areas}: Nanoscale Energy Transport and Conversion, Thermal Management in Advanced Electronics, First-Principles Modeling, Computational Materials Science
-  \item \textbf{Expertise}: Density Functional Theory (DFT), Molecular Dynamics (MD), Boltzmann Transport Equation (BTE) Analysis, Phonon and Electron Transport Modeling, Heat Transfer Optimization
-\end{itemize}
-\Gap
+\section*{Media Coverage}
+
+Research featured by news outlets including \medialink{https://interestingengineering.com/science/metallic-material-highest-thermal-conductivity-identified}{Interesting Engineering}, \medialink{https://newatlas.com/materials/metallic-material-conducts-heat-3x-tantalum-nitride}{New Atlas}, \medialink{https://physicsworld.com/a/metallic-material-breaks-100-year-thermal-conductivity-record}{Physics World}, \medialink{https://hothardware.com/news/breakthrough-metal-could-revolutionize-chip-cooling-and-thermal-management}{HotHardware}, \medialink{https://techxplore.com/news/2026-01-newly-metallic-material-thermal-upends.html}{Tech Xplore}, \medialink{https://static.asminternational.org/amp/202603/}{AMP Magazine (ASM International)}, \medialink{https://www.nanowerk.com/nanotechnology-news3/newsid\%3D68531.php}{Nanowerk}, \medialink{https://newsroom.ucla.edu/dept/faculty/tantalum-nitride-record-thermal-conductivity-ucla-research}{UCLA Newsroom}, \medialink{https://samueli.ucla.edu/ucla-led-team-discovers-metallic-material-with-record-thermal-conductivity/}{UCLA Samueli News}, \medialink{https://dailybruin.com/2026/02/20/ucla-engineers-discover-metal-with-potential-to-enhance-ai-chip-performance}{Daily Bruin}, \medialink{https://cnsi.ucla.edu/january-16-2026-ucla-led-team-discovers-metallic-material-with-record-thermal-conductivity}{UCLA CNSI News}.
 
 \end{document}
